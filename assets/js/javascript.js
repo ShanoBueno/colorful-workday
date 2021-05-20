@@ -8,14 +8,14 @@ var colorCodeNine = function(){
   var currentHour = d.getHours();
 
   if (currentHour === 9) {
-    $("#nine").css("background-color", "grey")
+    $("#nine").css("background-color", "red")
   }
   else if (currentHour > 9){
-  $("#nine").css("background-color", "red"); 
+  $("#nine").css("background-color", "lightgrey"); 
   }
 
   else {
-    $("#nine").css("background-color", "green");
+    $("#nine").css("background-color", "lightgreen");
   }
 }
 
@@ -27,14 +27,14 @@ var colorCodeTen = function () {
   var currentHour = d.getHours();
 
   if (currentHour === 10) {
-    $("#ten").css("background-color", "grey")
+    $("#ten").css("background-color", "red")
   }
   else if (currentHour > 10) {
-    $("#ten").css("background-color", "red");
+    $("#ten").css("background-color", "lightgrey");
   }
 
   else {
-    $("#ten").css("background-color", "green");
+    $("#ten").css("background-color", "lightgreen");
   }
 }
 
@@ -44,14 +44,14 @@ var colorCodeEleven = function () {
   var currentHour = d.getHours();
 
   if (currentHour === 11) {
-    $("#eleven").css("background-color", "grey")
+    $("#eleven").css("background-color", "red")
   }
   else if (currentHour > 11) {
-    $("#eleven").css("background-color", "red");
+    $("#eleven").css("background-color", "lightgrey");
   }
 
   else {
-    $("#eleven").css("background-color", "green");
+    $("#eleven").css("background-color", "lightgreen");
   }
 }
 
@@ -61,14 +61,14 @@ var colorCodeNoon = function () {
   var currentHour = d.getHours();
 
   if (currentHour === 12) {
-    $("#noon").css("background-color", "grey")
+    $("#noon").css("background-color", "red")
   }
   else if (currentHour > 12) {
-    $("#noon").css("background-color", "red");
+    $("#noon").css("background-color", "lightgrey");
   }
 
   else {
-    $("#noon").css("background-color", "green");
+    $("#noon").css("background-color", "lightgreen");
   }
 }
 
@@ -78,14 +78,14 @@ var colorCodeOne = function () {
   var currentHour = d.getHours();
 
   if (currentHour === 13) {
-    $("#one").css("background-color", "grey")
+    $("#one").css("background-color", "red")
   }
   else if (currentHour > 13) {
-    $("#one").css("background-color", "red");
+    $("#one").css("background-color", "lightgray");
   }
 
   else {
-    $("#one").css("background-color", "green");
+    $("#one").css("background-color", "lightgreen");
   }
 }
 
@@ -95,14 +95,14 @@ var colorCodeTwo = function () {
   var currentHour = d.getHours();
 
   if (currentHour === 14) {
-    $("#two").css("background-color", "grey")
+    $("#two").css("background-color", "red")
   }
   else if (currentHour > 14) {
-    $("#two").css("background-color", "red");
+    $("#two").css("background-color", "lightgrey");
   }
 
   else {
-    $("#two").css("background-color", "green");
+    $("#two").css("background-color", "lightgreen");
   }
 }
 
@@ -112,14 +112,14 @@ var colorCodeThree = function () {
   var currentHour = d.getHours();
 
   if (currentHour === 15) {
-    $("#three").css("background-color", "grey")
+    $("#three").css("background-color", "red")
   }
   else if (currentHour > 15) {
-    $("#three").css("background-color", "red");
+    $("#three").css("background-color", "lightgrey");
   }
 
   else {
-    $("#three").css("background-color", "green");
+    $("#three").css("background-color", "lightgreen");
   }
 }
 
@@ -129,14 +129,14 @@ var colorCodeFour = function () {
   var currentHour = d.getHours();
 
   if (currentHour === 16) {
-    $("#four").css("background-color", "grey")
+    $("#four").css("background-color", "red")
   }
   else if (currentHour > 16) {
-    $("#four").css("background-color", "red");
+    $("#four").css("background-color", "lightgrey");
   }
 
   else {
-    $("#four").css("background-color", "green");
+    $("#four").css("background-color", "lightgreen");
   }
 }
 
@@ -146,14 +146,14 @@ var colorCodeFive = function () {
   var currentHour = d.getHours();
 
   if (currentHour === 17) {
-    $("#five").css("background-color", "grey")
+    $("#five").css("background-color", "red")
   }
   else if (currentHour > 17) {
-    $("#five").css("background-color", "red");
+    $("#five").css("background-color", "lightgrey");
   }
 
   else {
-    $("#five").css("background-color", "green");
+    $("#five").css("background-color", "lightgreen");
   }
 }
 
@@ -182,15 +182,12 @@ $(".time-block").on("click", "p", function () {
     .removeAttr("style")
     .addClass("form-control")
     .val(text)
-    .id("input")
+  
 
   $(this).replaceWith(textInput);
   textInput.trigger("focus");
 
 });
-
-var taskNameInput = document.querySelector("input[name='task-name']");
-console.log(taskNameInput);
 
 
 
@@ -231,3 +228,14 @@ function addElement() {
 
 
 }
+
+
+$(".time-block").on("click", "i", function () {
+
+  var text = $("#ninetask").val()
+
+  localStorage.setItem("task", text)
+  console.log(text)
+  console.log("click")
+})
+
